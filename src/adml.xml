@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<rfc ipr="none" docName="draft-app-definition-markup-language-rfcs-01">
+    <front>
+        <title>RFC: App Definition Markup Language</title>
+        <author initial="A.F." suername="Forselius" fullname="Marius A. Forselius" firstname="Alexander">
+            <organization abbrev="BUDDHALOW">
+                Buddhalow Music
+            </organization>
+            <postal>
+                <street>Floragatan 21 D</street>
+                <city>Lidköping</city>
+                <code>53136</code>
+                <country>SE</country>
+            </postal>
+            <phone>+46 (0) 728 87 28 90</phone>
+            <email>alexander.forselius@buddhalow.com</email>
+            <uri>http://buddhalow.com/</uri>
+        </author>
+        <date month="may" year="2018" />
+        <area>General</area>
+        <workgroup>Buddhalow</workgroup>
+        <keyword>app</keyword>
+        <keyword>mobile</keyword>
+        <keyword>app</keyword>
+        <keyword>web</keyword>
+        <keyword>mobile</keyword>
+        <keyword>web</keyword>
+        <keywrod>development</keyword>
+        <keyword>generation</keyword>
+        <abstract>
+            <p>This memmo proposes an open format for specifying the outline of a desktop or mobile apps oriented by feature, which can be used to generate boilerplate for mobile and web apps</abstract>
+        </abstract>
+        <note>
+        
+        </note>    
+    </front>
+    <middle>
+        <section  anchor="intro" title="Introduction">
+            <p>This</p>
+        </section>
+        <section title="The markup">
+            <section title="app Element">
+                <p>The &lt;app&gt; root element specifies the app</p>
+                <section title="schema">
+                    <p>Specifies the data schema of the app</p>
+                </section>
+                <section title="features">
+                    <p>The features goes inside this element.</p>
+                    <section title="feature">
+                        <p>Specifying an feature of the app.</p>
+                        <section title="Attributes">
+                            <section title="the id attribute">
+                                <p>The identifier of the feature.</p>
+                            </section>
+                            <section title="The icon attribute">
+                                <p>The icon glyph attribute for generating the tab bar icon</p>
+                            </section>
+                        </section>
+                        <section title="elements">
+                            <section title="The list element">
+                                <p>Defines a list of something</p>
+                                <section title="attributes">
+                                    <section title="for">
+                                        <p>Which model the list should present</p>
+                                    </section>
+                                    <section title="selection">
+                                        <p>The context of the selection</p>
+                                    </section>
+                                </section>
+                            </section>
+                            <section title="the input element">
+                                <p>Defines an input to the feature.</p>
+                                <section title="attributes">
+                                    <section title="name">The id of the input</section>
+                                    <section title="type"><p>Type of input</p>
+                                        <section title="search">
+                                            <p>Defines a search field for the view</p>
+                                        </section>
+                                        
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section title="generators">
+            <p>Generators should automatically generate the bootstrap UI logic for login, search and browse and CRUD for the models defined if not overrided in the xml file.</p>
+        </section>
+    </middle>
+    
+</rfc>

@@ -1,4 +1,4 @@
-# App definition markup language (AppML)
+# App definition markup language (ADML)
 
-AppML is a specification to specify how an app should be, regardless of underlying platform. The purpose of it is to create a 
+ADML is a specification to specify how an app should be, regardless of underlying platform. The purpose of it is to create a 
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<app>
+    <info>
+        <author>
+            <company>Test</company>
+        </author>
+        <schema>
+            <model id="author">
+                <attribute type="string" name="name" />
+            </model>
+            <model id="episode">
+                <attribute type="string" name="url" />
+                <attribute type="string" name="name" />
+                <attribute type="string" name="pubDate" />
+                <attribute type="relation" to="podcast" name="podcast" />
+            </model>
+            <model id="podcast">
+                <attribute type="string" name="name" />
+                <attribute type="string" name="id" identifier="true" />
+                <attribute type="string" name="url" />
+                <attribute type="belongsTo" to="author" name="author" /> 
+                <attribute type="hasMany" to="episode" name="episodes" />
+            </model>
+        </schema>
+        <features>
+            <feature id="start" type="tab">
+                <page>
+                    <flow type="podcast" selection="featured" />
+                </page>
+            </feature>
+            <feature id="search" type="tab">
+                <input type="search" name="q">
+                <page>
+                    <flow for="podcast" selection="search" q="q" navigate="#podcast" />
+                    <flow for="author" selection="search" q="q" />
+                    <list for="episode" selection="search" q="q" />
+                </page>
+            </feature>
+        <feature>
